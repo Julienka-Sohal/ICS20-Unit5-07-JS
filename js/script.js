@@ -10,25 +10,17 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-04-JS/sw.js", {
-    scope: "/ICS2O-Unit5-04-JS/",
+  navigator.serviceWorker.register("/ICS20-Unit5-07-JS/sw.js", {
+    scope: "/ICS20-Unit5-07-JS/",
   })
 }
 
 //process
 function myButtonClicked() {
-  const day = document.getElementById("week").value
-  const typeAge = document.getElementById("typeAge").value
-
-  if (
-    day == "Tuesday" ||
-    day == "Thursday" ||
-    (typeAge >= 12 && typeAge <= 25)
-  ) {
-    document.getElementById("weekday-discount").innerHTML =
-      "You are eligible to get a discount!"
-  } else {
-    document.getElementById("weekday-discount").innerHTML =
-      "You are not eligible to get a discount..."
+let input = parseInt(document.getElementById("typeNum").value)
+let sum = 0
+  for(let i = 0; i<=input; i++){
+    sum = input/2*(input + 1);
   }
+document.getElementById("ANS").innerHTML = "The answer is " + sum + "."
 }
