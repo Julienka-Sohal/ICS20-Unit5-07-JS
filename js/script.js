@@ -17,10 +17,10 @@ if (navigator.serviceWorker) {
 
 //process
 function myButtonClicked() {
-let input = parseInt(document.getElementById("typeNum").value)
-let sum = 0
-  for(let i = 0; i<=input; i++){
-    sum = input/2*(input + 1);
+  let input = parseInt(document.getElementById("typeNum").value)
+  let sum = 0
+  for (let i = 0; i <= input; i++) {
+    sum = (input / 2) * (input + 1)
   }
-document.getElementById("ANS").innerHTML = "The answer is " + sum + "."
+  document.getElementById("ANS").innerHTML = "The answer is " + sum + "."
 }
